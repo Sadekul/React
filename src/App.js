@@ -1,25 +1,46 @@
 import React from 'react';
 // import './App.css';
 import Card from './components/Card';
+import Data from './data.json'
 
 function App() {
+
+  // console.log(Data[0].title);
+
+
+
+  
+let items = [];
+//data access using loop
+// for(let x = 0; x < Data.length; x++){
+//   items.push(  <Card key={x} titleText={Data[x].title} descText={Data[x].desc} footerTitle={Data[x].footerTitle} /> )
+// }
+
+//data access using maps
+items = Data.map((item, index) => <Card key={index} titleText={item.title} descText={item.desc} footerTitle={item.footerTitle} />)
+ 
   return (<div>
        <h1 className="headerStyle">Page Title</h1>
-       <Card  
-       titleText="This is Title" 
-       descText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-       footerTitle="This is Footer"
+      {items}
+
+
+      {/* {Data.map((item) => <Card  titleText={item.title} descText={item.desc} footerTitle={item.footerTitle} />)} */}
+
+       {/* <Card  
+       titleText={Data[0].title}
+       descText={Data[0].desc}
+       footerTitle={Data[0].footerTitle}
        />
        <Card 
-        titleText="Title 2" 
-        descText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-        footerTitle="Footer 2"
+        titleText={Data[1].title}
+        descText={Data[1].desc}
+        footerTitle={Data[1].footerTitle}
        />
        <Card 
-        titleText="Title 3" 
-        descText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        footerTitle="This is Footer 3"
-       />
+       titleText={Data[2].title}
+       descText={Data[2].desc}
+       footerTitle={Data[2].footerTitle}
+       /> */}
  </div>
   );
 }
