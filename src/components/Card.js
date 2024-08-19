@@ -10,5 +10,4 @@ const {titleText, descText} = props;
     <p className=' cardFooter'>{props.footerTitle}</p>
   </div>
   }
-
   export default Card;
