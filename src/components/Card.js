@@ -1,13 +1,13 @@
 //its call Props
-function Card(props){
+function Card(Props){
+  const {name, desc} = Props;
+    return(
+      <div className="card">
+        <h3>{name}</h3>
+        <p>{desc}</p>
+      </div>
+    )
+ 
 
-  //its call disctructure
-const {titleText, descText} = props;
-
-    return <div className='card'>
-    <h3 className='cardTitle'>{titleText}</h3>
-    <p className='cardDesc'>{descText}</p>
-    <p className=' cardFooter'>{props.footerTitle}</p>
-  </div>
   }
   export default Card;
