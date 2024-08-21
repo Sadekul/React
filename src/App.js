@@ -3,6 +3,8 @@ import React from 'react';
 // import Card2 from './components/ClassComponents';
 // import Icon from './components/use-react-icon';
 import ReactBootstrap from './components/React_Bootstrap/ReactBootstrap';
+import STATE from './components/STATE';
+
 
 function App() {
 
@@ -12,6 +14,7 @@ function App() {
     <Card2 name="Class Copmonents title"/>
     <Icon/> */}
     <ReactBootstrap />
+    <STATE />
  </div>
   );
 }
