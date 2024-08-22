@@ -4,7 +4,7 @@ import React from 'react';
 // import Icon from './components/use-react-icon';
 import ReactBootstrap from './components/React_Bootstrap/ReactBootstrap';
 import STATE from './components/STATE';
-
+import ConditionalRendering from './components/Conditional_Rendering/Index'
 
 function App() {
 
@@ -15,6 +15,7 @@ function App() {
     <Icon/> */}
     <ReactBootstrap />
     <STATE />
+    <ConditionalRendering />
  </div>
   );
 }
