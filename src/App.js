@@ -5,7 +5,9 @@ import React from 'react';
 // import ReactBootstrap from './components/React_Bootstrap/ReactBootstrap';
 // import STATE from './components/STATE';
 // import ConditionalRendering from './components/Conditional_Rendering/Index'
-import Event_Handeler_Class from './components/Event_Handeler_Class';
+// import Event_Handeler_Class from './components/Event_Handeler_Class';
+import EVENT_BINDING from './components/EVENT_BINDING/index'
+
 
 function App() {
 
@@ -17,8 +19,9 @@ function App() {
     {/* <ReactBootstrap />
     <STATE />
     <ConditionalRendering /> */}
+    {/* <Event_Handeler_Class /> */}
 
-    <Event_Handeler_Class />
+    <EVENT_BINDING />
  </div>
   );
 }
