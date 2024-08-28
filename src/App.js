@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import Card from './components/Card';
 // import Card2 from './components/ClassComponents';
 // import Icon from './components/use-react-icon';
@@ -28,18 +28,20 @@ import React, { useState } from 'react';
 // }
 
 const App = () =>{
-  const [count, setCount] = useState(0);
-  const  handleIncrement = () =>{
-    setCount((prevCount) => prevCount + 1); // 0 + 1 = 1
-    setCount((prevCount) => prevCount + 1); // 1 + 1 = 2
-    setCount((prevCount) => prevCount + 1); // 2 + 1 = 3
+  const handleParentClick = (event) =>{
+  console.log("Parent event: ", event);
   }
-  return (
-    <div>
-           <h1 className="headerStyle">update state based on previous state</h1>
 
-           <h2>{count}</h2>
-           <button onClick={handleIncrement}>+</button>
+  const handleChildClick = (event) =>{
+    event.stopPropagation();
+    console.log("Child event: ", event);
+    }
+
+
+  return (
+    <div className='parent' onClick={handleParentClick}>
+           <h1 className="headerStyle">Event Bubbling | stopPropagation</h1>
+           <button onClick={handleChildClick}>+</button>
 
     </div>
   )
