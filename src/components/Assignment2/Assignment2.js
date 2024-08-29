@@ -5,13 +5,13 @@ export default function Assignment2 (){
 
     const [count, setCount] = useState(0)
     const handleIncrement = () =>{
-        setCount(count + 1);
+        setCount((count) => count + 1);
     }
     const handleDecrement = () =>{
-        setCount(count - 1);
+        setCount((count) => count - 1);
     }
     const resetBtn = () => {
-        setCount (count - count)
+        setCount ((count) => count - count)
     }
 
 
