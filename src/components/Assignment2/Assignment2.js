@@ -21,7 +21,7 @@ export default function Assignment2 (){
              <span>Count :{count}</span>
              <button onClick={handleIncrement} disabled={count === 5 ? true : false}>+</button>
         
-             <button className='reset-btn'  onClick={resetBtn}>Reset Button</button>
+             <button className='reset-btn'  onClick={resetBtn} disabled={count === 0 ? true : false}>Reset Button</button>
         </div>
       )
 }
