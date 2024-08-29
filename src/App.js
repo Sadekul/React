@@ -1,4 +1,5 @@
 import React from 'react';
+import Assignment2 from './components/Assignment2/Assignment2'
 // import Card from './components/Card';
 // import Card2 from './components/ClassComponents';
 // import Icon from './components/use-react-icon';
@@ -28,20 +29,21 @@ import React from 'react';
 // }
 
 const App = () =>{
-  const handleParentClick = (event) =>{
-  console.log("Parent event: ", event);
-  }
+  // const handleParentClick = (event) =>{
+  // console.log("Parent event: ", event);
+  // }
 
-  const handleChildClick = (event) =>{
-    event.stopPropagation();
-    console.log("Child event: ", event);
-    }
+  // const handleChildClick = (event) =>{
+  //   event.stopPropagation();
+  //   console.log("Child event: ", event);
+  //   }
 
 
   return (
-    <div className='parent' onClick={handleParentClick}>
-           <h1 className="headerStyle">Event Bubbling | stopPropagation</h1>
-           <button onClick={handleChildClick}>+</button>
+    <div className='parent'>
+           <h1 className="headerStyle">Assignment-2</h1>
+           <Assignment2 />
+           {/* <button onClick={handleChildClick}>+</button> */}
 
     </div>
   )
